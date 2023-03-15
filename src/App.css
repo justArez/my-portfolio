@@ -1,38 +1,100 @@
+/*Nav item font*/
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&display=swap');
+
+/*Header title font*/
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+
+/*H1 font*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700;900&display=swap');
+
 .App {
-  text-align: center;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  --primary: #095e1e;
+  --secondary: #0a8d2b;
+  --accent: #abc959;
+  --background:#01170a;
+  --white:#eeeeee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header {
+  padding: 0vmin;
+  padding-left: 20vmin;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--background);
 }
 
-.App-link {
-  color: #61dafb;
+
+.header-avatar {
+  height: 6vmin;
+  border: solid var(--accent) 0.5px;
+  pointer-events: none;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-title{
+  font-family: 'Coda';
+  padding-left: 10px;
+  min-width: fit-content;
+  font-size: 2.5vmin;
+  font-weight: 700;
+  color: var(--white);
 }
+
+.header-nav{
+  display: flex;
+  padding-left: 90vmin;
+  max-width: 35vw;
+  min-width: fit-content;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 2.5vmin;
+}
+
+.nav-item{
+  position: relative;
+  font-family: 'Golos Text', cursive;
+  text-decoration: none;
+  font-size: 2vmin;
+  font-weight: 400;
+  color: var(--white);
+  padding: 0 3px;
+}
+
+.nav-item:before {
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  background-color: var(--primary);
+  height: 2px;
+  border-radius: 25px;
+  width: 100%;
+  left: 0px;
+  top: 125%;
+  transform: scale(0, 1);
+  transition: 0.3s all ease;
+}
+
+.nav-item:hover{
+  font-family: 'Golos Text', cursive;
+  text-decoration: none;
+  font-size: 2vmin;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.nav-item:hover:before {
+  visibility: visible;
+  transform: scale(1, 1);
+  transition: 0.3s all ease;
+}
+
+
+
+
+
+
